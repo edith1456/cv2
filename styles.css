@@ -2,7 +2,18 @@
            SITE WIDE
 
 ************************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main {
+  margin: 20px;
+}
+
 /*FONTS*/
+
 body {
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
   font-weight: 200;
@@ -40,7 +51,51 @@ h5 {
   margin: 0px;
 }
 
-/* MY DISPLAY */
+/*NAVBAR*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 30px;
+}
+
+.navbar {
+  background-color: #3474e6;
+  color: white;
+  height: 60px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font: size 18px;
+  font-weight: bold;
+}
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/*******************************************************
+                CV
+
+********************************************************/
 
 #info .left {
   display: inline-block;
@@ -84,37 +139,85 @@ section .right {
 
 ************************************************/
 
+.contact-wrapper{
+  margin: 20px;
+}
+
+
 .form-question {
   margin: 20px 0;
 }
-.form-question  label{
+.form-question label {
   display: block;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
-.form-question input,.form-question textarea{
-    width: 80vw;
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding:5px 10px;
+.form-question input,
+.form-question textarea {
+  width: 80vw;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
-.required label::after{
-    content:" *";
-    color: red;
+.required label::after {
+  content: " *";
+  color: red;
 }
-#submit{
-    padding:7px 20px;
-    border-radius:4px;
-    background-color: aliceblue;
-    border:0;
-    box-shadow:1px 2px;
-    box-shadow: #333333;
+#submit {
+  padding: 7px 20px;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: 0;
+  box-shadow: 1px 2px;
+  box-shadow: #333333;
+}
+#submit:hover {
+  background-color: #004477;
+  color: aliceblue;
+  box-shadow: none;
+  border: 1px solid black;
+}
 
+
+/******************************************************
+              PROJECTS
+*******************************************************/
+
+
+#grid-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height:100%;
+  gap:20px 40px;
+  margin:20px;
+  
 }
-#submit:hover{
-    background-color: #004477;
-    color: aliceblue;
-    box-shadow: none;
-    border:1px solid black;
+
+.project-title{
+  grid-column:1/3;
+  grid-row:1/2;
+  height:50px;
+  border:1px solid black;
+  height: 150px;
+  
+}
+.item1{
+  grid-column: 1/2;
+  grid-row:2/3;
+  border:1px solid black;
+}
+.item2{
+  grid-column: 2/2;
+  grid-row:2/3;
+  height:100%;
+  border:1px solid black;
+}
+
+/* flex box */
+
+#flex-container{
+display: flex;
+flex-direction:column;
 
 }
