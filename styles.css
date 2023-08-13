@@ -2,10 +2,6 @@
            SITE WIDE
 
 ************************************************/
-body {
-  margin: 0;
-  padding: 0;
-}
 
 header,
 main {
@@ -17,8 +13,11 @@ main {
 body {
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
   font-weight: 200;
-  color: #333333;
-  background-color: blanchedalmond;
+  color: #f2efed;
+  margin: 0;
+  padding: 0;
+  background-color: #161616;
+  overflow: hidden;
 }
 
 h1,
@@ -28,7 +27,7 @@ h2 {
 }
 h1 {
   font: size 40px;
-  color: #004477;
+  color: #f7f7f9;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -51,95 +50,60 @@ h5 {
   margin: 0px;
 }
 
-/*NAVBAR*/
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-.navbar {
-  background-color: #3474e6;
-  color: white;
-  height: 60px;
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-.navbar li {
-  margin-left: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font: size 18px;
-  font-weight: bold;
-}
-.logo {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: x-large;
-  font-weight: bold;
-}
 
 /*******************************************************
                 CV
 
 ********************************************************/
-#info, main{
-  max-width:1000px;
-  padding:0 20px;
+#cv-body{
+  background-color:#161616;
 }
-#info{
+
+.paper-background {
+  background-color: white;
+  max-width: 1000 px;
+  margin:10vh 50px;
+  padding: 20px;
+}
+
+#info,
+main {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+#info {
   margin: 30px auto;
-  
 }
-main{
-  margin: 0 auto;
+main {
+  margin: 30px auto;
 }
-#info h1,
+#info h1 {
+  margin: 0;
+}
 #info h2 {
   margin: 0;
 }
-.paper-background{
-  background-color:white ;
-  max-width:1000px;
-  margin:20px auto;
-  padding:20px;
-}
-
 /* DISPLAY */
-
-@media screen and(max-width:799px) {
-  
-  #info .left{
+@media screen and (max-width: 799px) {
+  #info {
+    display: block;
+  }
+  #info .left {
     text-align: center;
   }
-  #info .right{
+  #info .right {
     text-align: center;
     margin-top: 20px;
   }
-  section .right{
+  section .right {
     margin: 20px;
-
   }
-  section h3{
-    font-weight:bold;
+  section h3 {
+    font-weight: bold;
   }
 }
-
-
-@media screen and(min-width: 800px) {
+@media screen and (min-width: 800px) {
   #info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -148,18 +112,11 @@ main{
     align-self: end;
     text-align: right;
   }
-  
   section {
     display: grid;
     grid-template-columns: 200px 1fr;
   }
 }
-
-
-
-
-
-
 .work-item {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -168,15 +125,8 @@ main{
   grid-area: 2 / 1 / 3 / 3;
 }
 
-.work-title-left {
-  display: inline-block;
-  width: 74%;
-}
 
-.work-title-right {
-  display: inline-block;
-  width: 24%;
-}
+
 
 /***********************************************
            CONTACT
@@ -184,28 +134,34 @@ main{
 ************************************************/
 
 .contact-wrapper {
-  margin: 20px;
+  margin: 0 30vh 0;
+  align-items: center;
+  margin-top:5vh
 }
+#mysubmit{
+  margin-left:30vw;
 
-.form-question {
-  margin: 20px 0;
 }
-.form-question label {
-  display: block;
-  margin-bottom: 5px;
-}
-.form-question input,
-.form-question textarea {
-  width: 80vw;
-  border: 1px solid #444;
-  border-radius: 5px;
-  padding: 5px 10px;
+@media screen and (max-width: 799px) {
+  .contact-wrapper {
+    margin: 20px ;
+    margin-top:5vh ;
+    align-items: center;
+  }
+  #mysubmit{
+    margin: 0 40vw;
+  }
+
 }
 
 .required label::after {
   content: " *";
   color: red;
 }
+
+
+
+
 #submit {
   padding: 7px 20px;
   border-radius: 4px;
@@ -213,9 +169,10 @@ main{
   border: 0;
   box-shadow: 1px 2px;
   box-shadow: #333333;
+  
 }
 #submit:hover {
-  background-color: #004477;
+  background-color: #F90F92;
   color: aliceblue;
   box-shadow: none;
   border: 1px solid black;
@@ -225,37 +182,38 @@ main{
               PROJECTS
 *******************************************************/
 
-#grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 100%;
-  gap: 20px 40px;
-  margin: 20px;
-}
 
-.project-title {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  height: 50px;
-  border: 1px solid black;
-  height: 150px;
-}
-.item1 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  border: 1px solid black;
-}
-.item2 {
-  grid-column: 2/2;
-  grid-row: 2/3;
-  height: 100%;
-  border: 1px solid black;
-}
+/******************** ************************
+         home page
+********************************************/
+  .anlge-brackets{
+    color:#F90F92;
+  }
 
-/* flex box */
-
-#flex-container {
-  display: flex;
-  flex-direction: column;
+  
+  .bigname h1{
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-family: "Poppins",Sans-serif;
+    font-weight: 50;
+    text-align:center ;
+    padding-top :28vh;
+    letter-spacing: 2.2px;
+      
+  }
+  .bigname>p{
+    text-align:center ;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+  }
+  
+  #cursor-follower {
+    width: 5px;
+    height: 5px;
+    background-color: #F90F92;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    transform-origin: center;
 }

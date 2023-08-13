@@ -6,103 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My CV</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo">My logo</div>
-        <ul class="nav">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#">CV</a></li>
-          <li><a href="./project.html">Projects</a></li>
-          <li><a href="./contact.html">Contacts</a></li>
+  <body id="cv-body">
+
+
+    <nav class="navbar navbar-expand-md  navbar-inverse fixed-top" data-bs-theme="dark">
+      <div class="navbar-brand"></div>
+      <a class="navbar-brand col-4" href="./index.html">Edith._</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <span class="anlge-brackets">&lt;</span>
+              Home
+              <span class="anlge-brackets">&gt;</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span class="anlge-brackets"> &lt; </span>
+              CV
+              <span class="anlge-brackets"> &gt; </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./project.html">
+              <span class="anlge-brackets"> &lt; </span>
+              Projects
+              <span class="anlge-brackets"> &gt; </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">
+              <span class="anlge-brackets"> &lt; </span>
+              Contacts
+              <span class="anlge-brackets"> &gt; </span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
+    
 
+
+
+  <div class="container-fluid ">
     <div class="paper-background">
-    <header id="info">
-      <div class="left">
-        <h1>Edith Awino</h1>
-        <h2>Web Developer</h2>
-      </div>
-      <div class="right">
-        <strong>Email:</strong>
-        <a href="mailto:edithaabrooks@gmail.com11">edithaabrooks@gmail.com</a>
-        <br />
-        <strong>Github:</strong>
-        <a href="https://github.com/edith1456"> Edith1456</a>
-      </div>
-    </header>
-
-    <main>
-      <hr />
-
-      <section id="profile">
+      <header id="info">
         <div class="left">
-          <h3>Profile</h3>
+          <h1>Edith Awino</h1>
+          <h2>Web Developer</h2>
         </div>
         <div class="right">
-          <p>
-            I am a diligent and self-motivated individual actively seeking a job
-            opportunity to cultivate my professional expertise as a software
-            developer.
-          </p>
+          <strong>Email:</strong>
+          <a href="mailto:edithaabrooks@gmail.com11">edithaabrooks@gmail.com</a>
+          <br />
+          <strong>Github:</strong>
+          <a href="https://github.com/edith1456"> Edith1456</a>
         </div>
-      </section>
+      </header>
 
-      <hr />
-      <section id="skills">
-        <div class="left">
-          <h3>skills</h3>
-        </div>
-        <div class="right">
-          <ul>
-            <li>Eye for artistic design.</li>
-            <li>Responsible and hard worker.</li>
-          </ul>
-        </div>
-      </section>
+      <main>
+        <hr />
 
-      <hr />
-      <section id="experience">
-        <div class="left">
-          <h3>Experience</h3>
-        </div>
-        <div class="right">
-          <div class="work-item">
-            <div class="work-title-left">
-              <h4>Job title</h4>
-              <h5>Company</h5>
-            </div>
-            <div class="work-title-right">
-              <h5>Dates</h5>
-            </div>
-            <p>Job Description</p>
+        <section id="profile">
+          <div class="left">
+            <h3>Profile</h3>
           </div>
-          <hr />
-        </div>
-      </section>
+          <div class="right">
+            <p>
+              I am a diligent and self-motivated individual actively seeking a
+              job opportunity to cultivate my professional expertise as a
+              software developer.
+            </p>
+          </div>
+        </section>
 
-      <hr />
-      <section id="education">
-        <div class="left">
-          <h3>Education</h3>
-        </div>
-        <div class="right">
-          <p class="schools">
-            <strong></strong><br />
-            Degree and field of study<br />
-            Dates
-          </p>
-          <p class="schools">
-            <strong></strong><br />
-            Degree and field of study<br />
-            Dates
-          </p>
-        </div>
-      </section>
-    </main>
+        <hr />
+        <section id="skills">
+          <div class="left">
+            <h3>skills</h3>
+          </div>
+          <div class="right">
+            <ul>
+              <li>Eye for artistic design.</li>
+              <li>Responsible and hard worker.</li>
+            </ul>
+          </div>
+        </section>
+
+        <hr />
+        <section id="experience">
+          <div class="left">
+            <h3>Experience</h3>
+          </div>
+          <div class="right">
+            <div class="work-item">
+              <div class="work-title-left">
+                <h4>Job title</h4>
+                <h5>Company</h5>
+              </div>
+              <div class="work-title-right">
+                <h5>Dates</h5>
+              </div>
+              <p>Job Description</p>
+            </div>
+            <hr />
+          </div>
+        </section>
+
+        <hr />
+        <section id="education">
+          <div class="left">
+            <h3>Education</h3>
+          </div>
+          <div class="right">
+            <p class="schools">
+              <strong></strong><br />
+              Degree and field of study<br />
+              Dates
+            </p>
+            <p class="schools">
+              <strong></strong><br />
+              Degree and field of study<br />
+              Dates
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
   </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
