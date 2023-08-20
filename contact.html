@@ -82,6 +82,7 @@
           <div class="mb-3">
             <label for="email" class="form-label">Email:</label>
             <input
+              name="email"
               type="email"
               class="form-control"
               id="email"
@@ -93,10 +94,11 @@
           <div class="mb-3 required">
             <label for="phone" class="form-label">Phone</label>
             <input
+              name="phone"
               type="number"
               class="form-control"
               id="phone"
-              aria-describedby="email"
+              aria-describedby="phone-number"
             />
           </div>
         </div>
@@ -104,7 +106,8 @@
         <div class="row mx-2 my-4">
           <div class="form-floating mb-3">
             <input
-              type="email"
+              name="form-floating"
+              type="text"
               class="form-control"
               id="floatingInput"
               placeholder="type here"
@@ -114,6 +117,7 @@
         </div>
         <input type="hidden" name="_captcha" value="false" />
         <input
+          name=""
           type="hidden"
           name="_next"
           value="http://127.0.0.1:5500/contact.html"
