@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOKE GENERATOR</title>
+    <link rel="stylesheet" href="jokes.css" />
+  </head>
+  <body>
+    <a href="/project.html">&#8592; back to project</a>
+
+    <div id="box">
+      <span id="generate-button">random joke generator</span>
+
+      <div id="joke-section" class="content-fade">
+        <p></p>
+      </div>
+      <input type="submit" id="btn" value="Generate Jokes" />
+    </div>
+
+    <script>
+      const jokeSection = document.querySelector("#joke-section");
+      const generateBtn = document.querySelector("#btn");
+
+      let API =
+        "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+
+      function acquireJoke() {
+        jokeSection.classList.remove("content-fade");
+        fetch(API)
+          .then((info) => info.json())
+          .then((item) => {
+            jokeSection.textContent = `${item.joke}`;
+
+            jokeSection.classList.add("content-fade");
+          });
+      }
+      generateBtn.addEventListener("click", acquireJoke);
+    </script>
+  </body>
+</html>
